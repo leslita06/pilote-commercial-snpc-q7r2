@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T14:58:17Z",
+ "maj": "2026-10-15T15:00:11Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -215,6 +215,28 @@
    },
    "texte": "🎙️ Compte rendu vocal, transcrit : Donc bonjour, c'est la commerciale Leslie. Je vais faire un compte rendu de ma visite à Sycomex à Marcory Potopoto. Du coup, je les ai rencontrés et j'ai proposé notre gamme de façades, mais ils n'étaient pas du tout intéressés parce qu'ils ont trouvé que notre prix était trop cher, était deux fois trop cher que la compétition. Et d'ailleurs, apparemment, il y a eu des retours d'autres clients qui n'ont pas du tout aimé notre gamme.",
    "resume": "Visite chez Sycomex à Marcory Potopoto, gamme façade proposée, pas d'intérêt à cause du prix jugé deux fois trop élevé et de retours clients négatifs."
+  },
+  {
+   "id": "wa-SxI7f38wXvyXD29ItF0vZQ",
+   "source": "whatsapp",
+   "date": "2026-10-15",
+   "heure": "14:59",
+   "commercial": "Leslie",
+   "point_de_vente": "Point de vente non précisé",
+   "zone": null,
+   "type": "visite",
+   "produits": [],
+   "montant": null,
+   "plus": [],
+   "moins": [],
+   "suite": [],
+   "gps": {
+    "lat": 5.296687,
+    "lng": -3.984437
+   },
+   "texte": "CR Visite Quincaillerie AMBA Blockhaus\ninteressé \nMontant potentiel 10M cfa",
+   "secteur": null,
+   "statut": "interesse"
   }
  ],
  "positions": [
