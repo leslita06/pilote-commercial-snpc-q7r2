@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T13:05:31Z",
+ "maj": "2026-10-15T13:07:06Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -32,8 +32,14 @@
     "Rappeler jeudi",
     "Livrer un échantillon"
    ],
-   "gps": null,
+   "gps": {
+    "lat": 5.335194,
+    "lng": -4.075756,
+    "approx": true,
+    "lieu": "Yopougon"
+   },
    "texte": "CR VISITE\nPoint de vente : Quincaillerie Bénédiction, Yopougon\nType : visite\nProduits : façade 10 seaux, enduit 20 sacs\nMontant : 650 000\n+ : bon accueil, veut tester la façade\n- : Royal moins cher\nSuite : rappeler jeudi, livrer un échantillon",
+   "secteur": null,
    "statut": "interesse"
   },
   {
@@ -108,6 +114,7 @@
     "lng": -4.00173282623291
    },
    "texte": "CR RDV\nPoint de vente : Chantier SICOGI, Yopougon\nType : rdv\nProduits : façade 200 seaux, enduit 150 sacs\nMontant : 11 025 000\n+ : 120 logements à peindre d'ici janvier, conducteur de travaux très ouvert\n- : compare avec Seigneurie, décision du promoteur\nSuite : envoyer le devis demain, organiser une démo façade sur un bloc témoin",
+   "secteur": null,
    "statut": "interesse"
   },
   {
@@ -132,7 +139,12 @@
     "Aucun point de vente proche de leur site"
    ],
    "suite": [],
-   "gps": null,
+   "gps": {
+    "lat": 5.426316,
+    "lng": -4.020225,
+    "approx": true,
+    "lieu": "Abobo"
+   },
    "texte": "🎙️ Compte rendu vocal, transcrit : J'étais à Abobo et j'ai croisé le propriétaire d'une promotion immobilière qui s'appelle Bou de Miel et ils ne sont pas du tout intéressés par nos produits parce qu'ils disent qu'ils ont déjà testé, la qualité n'est pas bonne, la peinture ne tient pas et que c'est trop cher et qu'il n'y a pas de point de vente aussi très proche de leur lieu.",
    "resume": "Rencontre à Abobo avec le propriétaire de la promotion immobilière Bou de Miel, qui refuse nos produits pour qualité, prix et éloignement."
   }
