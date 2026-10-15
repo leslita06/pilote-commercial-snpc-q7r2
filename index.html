@@ -1261,7 +1261,7 @@ async function syncTerrain() {
   const list = Array.isArray(data.comptes_rendus) ? data.comptes_rendus : [];
   const fresh = [];
   list.forEach((c) => {
-    const r = fromTerrain(c, S.sync.maj); if (!r) return; r.vocal = !!c.vocal;
+    const r = fromTerrain(c, S.sync.maj); if (!r) return; r.vocal = !!c.vocal; r.gpsApprox = !!(c.gps && c.gps.approx);
     const i = S.recs.findIndex((x) => x.id === r.id);
     if (i >= 0) { S.recs[i] = r; } else { S.recs.push(r); fresh.push(r); }
     const di = S.deals.findIndex((d) => d.id === "wad-" + r.id);
@@ -1900,7 +1900,7 @@ function crCard(r) {
       <div class="sn-sec"><small class="sn-sl">${ic("ok")}Points positifs</small>${list(r.plus, "p", "+")}</div>
       <div class="sn-sec"><small class="sn-sl">${ic("alert")}Points négatifs</small>${list(r.moins, "m", "−")}</div>
       <div class="sn-sec"><small class="sn-sl">${ic("todo")}Prochaines étapes</small>${todo}</div>
-      ${r.gps ? miniMap(r.gps, TYPES[r.type].col, initials(r.com)) : `<span class="sn-nogps">${ic("pin")}Position GPS non transmise</span>`}
+      ${r.gps ? (r.gpsApprox ? `<span class="sn-nogps">${ic("pin")}Position approximative, d'après le lieu indiqué</span>` : "") + miniMap(r.gps, TYPES[r.type].col, initials(r.com)) : `<span class="sn-nogps">${ic("pin")}Position GPS non transmise</span>`}
       ${r.texte ? `<details class="sn-raw"><summary>Message WhatsApp d'origine</summary><p>${esc(r.texte)}</p></details>` : ""}
     </div></article>`;
 }
