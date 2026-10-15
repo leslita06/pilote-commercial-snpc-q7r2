@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T13:28:34Z",
+ "maj": "2026-10-15T13:34:04Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -306,6 +306,104 @@
    "commercial": "Leslie",
    "date": "2026-10-15",
    "heure": "13:11",
+   "gps": {
+    "lat": 5.361783,
+    "lng": -3.957809
+   },
+   "prospects": [
+    {
+     "id": "ChIJMa87ptjswQ8RAW0WArS8QRg",
+     "nom": "Spécial Quincaillerie",
+     "categorie": "Marchand.e d'articles en fer",
+     "adresse": "926R+PV8, Bd François Mitterrand, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "+225 08306748",
+     "lat": 5.3617832,
+     "lng": -3.9578093,
+     "distance_km": 0.0,
+     "gammes": [
+      "int",
+      "end"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
+     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
+    },
+    {
+     "id": "ChIJAz0pc3HtwQ8RqFhEGwZZMIU",
+     "nom": "Quincaillerie marché de bois",
+     "categorie": "Quincaillerie",
+     "adresse": "84XH+5P6, Bingerville, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "+225 05 55 06 4955",
+     "lat": 5.3636268,
+     "lng": -3.9590334,
+     "distance_km": 0.2,
+     "gammes": [
+      "laq",
+      "ver"
+     ],
+     "pourquoi": "Magasin déco ou bois : ses clients finissent meubles et boiseries.",
+     "pitch": "Présentez la laque glycéro et le vernis bois, avec un nuancier en présentoir."
+    },
+    {
+     "id": "ChIJgS96IATtwQ8RGAoSs6_niLc",
+     "nom": "LE BATISSEUR",
+     "categorie": "Quincaillerie",
+     "adresse": "928Q+4V7, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "+225 07111105",
+     "lat": 5.3652882,
+     "lng": -3.9603425,
+     "distance_km": 0.5,
+     "gammes": [
+      "col",
+      "end",
+      "laq"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4.3 sur 5, 32 avis), donc fréquenté.",
+     "pitch": "Parlez marge : la colle et l'enduit tournent vite, la laque complète le panier des artisans peintres."
+    },
+    {
+     "id": "ChIJWyevAlvtwQ8RAg-ry9Q7H3c",
+     "nom": "Quincaillerie ABRI SUR",
+     "categorie": "Quincaillerie",
+     "adresse": "927P+5W5, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "+225 52361336",
+     "lat": 5.3628989,
+     "lng": -3.962648,
+     "distance_km": 0.5,
+     "gammes": [
+      "int",
+      "end"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
+     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
+    },
+    {
+     "id": "ChIJZVG0-cztwQ8RCwhen4mjrEE",
+     "nom": "Quincaillerie FC BARCELONA",
+     "categorie": "Quincaillerie",
+     "adresse": "926R+W88, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "",
+     "lat": 5.3622766,
+     "lng": -3.9591683,
+     "distance_km": 0.2,
+     "gammes": [
+      "int",
+      "end"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4 sur 5, 8 avis), donc fréquenté.",
+     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
+    }
+   ]
+  },
+  {
+   "id": "pr-u3AbafaTXgStzvG9c_MArQ",
+   "commercial": "Leslie",
+   "date": "2026-10-15",
+   "heure": "13:33",
    "gps": {
     "lat": 5.361783,
     "lng": -3.957809
