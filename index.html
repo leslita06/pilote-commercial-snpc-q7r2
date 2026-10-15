@@ -1548,6 +1548,7 @@ function renderPanier(L) {
 
 /* ---------- prospects proposés par Kouassi ---------- */
 S.prSel = {};
+function mapsUrl(lat, lng) { return `https://www.google.com/maps/search/?api=1&query=${(+lat).toFixed(6)},${(+lng).toFixed(6)}`; }
 function searchesFor(coms) { return S.recherches.filter((x) => !coms || coms.includes(x.com)); }
 const gammeName = (id) => PROD[id] ? PROD[id].nom : id;
 function renderProspects(key, list) {
@@ -1574,6 +1575,7 @@ function renderProspects(key, list) {
     return `<div class="sn-prc"><div class="sn-prh"><span class="sn-prn">${i + 1}</span><div style="min-width:0"><b>${esc(p.nom || "Prospect")}</b><small>${esc(p.categorie || "")}${p.distance_km != null ? `, à ${dec(+p.distance_km, 1)} km` : ""}</small></div></div>
       <div class="sn-prl">${ic("pin")}<span>${esc([p.adresse, p.quartier].filter(Boolean).join(", ") || "Adresse non précisée")}</span></div>
       ${tel ? `<a class="sn-prl sn-tel" href="tel:${esc(tel.replace(/[^\d+]/g, ""))}">${ic("phone")}<span>${esc(tel)}</span></a>` : `<div class="sn-prl">${ic("phone")}<span>Téléphone non trouvé</span></div>`}
+      ${p.lat != null ? `<a class="sn-prl sn-tel" target="_blank" rel="noopener" href="${mapsUrl(p.lat, p.lng)}">${ic("nav")}<span>Itinéraire Google Maps</span></a>` : ""}
       ${(p.gammes || []).length ? `<div class="sn-prods">${p.gammes.map((g) => `<span class="sn-prod"><i style="background:${PROD_COL[g] || PROD_COL.autre}"></i>${esc(gammeName(g))}</span>`).join("")}</div>` : ""}
       ${p.pourquoi ? `<div class="sn-prq"><small class="sn-sl">${ic("target")}Pourquoi lui</small><p>${esc(p.pourquoi)}</p></div>` : ""}
       ${p.pitch ? `<div class="sn-prq pitch"><small class="sn-sl">${ic("msg")}Le pitch</small><p>${esc(p.pitch)}</p></div>` : ""}</div>`;
@@ -1644,6 +1646,8 @@ function renderDay() {
   }
   const events = R0.map((r) => ({ ts: r.ts, r })).concat(P0.slice(arrival && !rdvP.length ? 1 : 0).map((p) => ({ ts: p.ts, p })));
   if (S.teamDay === 0) S.rdv.filter((r) => r.com === c.id && r.statut === "a_venir").forEach((r) => events.push({ ts: r.ts, rv: r }));
+  // Les prospects envoyés par Kouassi entrent dans la liste de visites du commercial, le jour de la recherche
+  S.recherches.filter((x) => x.com === c.id && x.ts >= d0 && x.ts < d1).forEach((x) => x.prospects.forEach((p, i) => events.push({ ts: x.ts + (i + 1) * 30 * 60000, pv: p })));
   events.sort((a, b) => a.ts - b.ts);
   let n = 0;
   events.forEach((e) => {
@@ -1655,6 +1659,10 @@ function renderDay() {
     } else if (e.p) {
       html += `<div class="sn-tli"><span class="sn-th">${hm(e.ts)}</span><span class="sn-tn" style="background:var(--sn-wa-deep)">${ic("nav")}</span><div class="sn-tb"><b>Position partagée sur WhatsApp</b><div class="sn-meta">${gpsTxt(e.p.pos)}</div></div></div>`;
       pts.push({ pos: e.p.pos, n: "•", col: "#128C7E", pop: `<b>Position partagée</b><br>${hFr(e.ts)}` });
+    } else if (e.pv) {
+      const p = e.pv;
+      html += `<div class="sn-tli" style="opacity:.85"><span class="sn-th">${hm(e.ts)}</span><span class="sn-tn" style="background:#F6C21A;color:var(--sn-navy)">${ic("target")}</span><div class="sn-tb"><b>À visiter : ${esc(p.nom || "Prospect")}</b><p>Prospect proposé par Kouassi${p.distance_km != null ? `, à ${dec(+p.distance_km, 1)} km` : ""}.${p.telephone ? " " + esc(p.telephone) + "." : ""}</p><div class="sn-meta">${p.lat != null ? `<a target="_blank" rel="noopener" href="${mapsUrl(p.lat, p.lng)}">${ic("nav")} Itinéraire</a>` : ""}</div></div></div>`;
+      if (p.lat != null) pts.push({ pos: [+p.lat, +p.lng], n: "P", col: "#F6C21A", pop: `<b>À visiter : ${esc(p.nom || "")}</b>` });
     } else if (e.rv) {
       html += `<div class="sn-tli" style="opacity:.75"><span class="sn-th">${hm(e.ts)}</span><span class="sn-tn" style="background:#C9D8EA;color:var(--sn-navy)">${ic("clock")}</span><div class="sn-tb"><b>${esc(pdvName(e.rv.pdv))}</b><p>Prévu : ${esc(e.rv.objet)}</p></div></div>`;
     }
