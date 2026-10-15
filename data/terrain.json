@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T12:33:27Z",
+ "maj": "2026-10-15T12:36:04Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -70,6 +70,45 @@
    },
    "texte": "🎙️ Compte rendu vocal, transcrit : J'aimerais faire aussi un compte rendu sur la visite à la quincaillerie immeuble MAB où justement il y a quelqu'un qui est intéressé par notre gamme de peinture parce que justement la gamme Seigneurie est très chère et d'ailleurs il avait été livré des gammes Seigneurie complètement périmées, c'est pour ça qu'il aime bien notre peinture à eau. Et ça c'est la commerciale Leslie qui t'a envoyé ce compte rendu.",
    "resume": "Visite à la quincaillerie immeuble MAB, où un interlocuteur est intéressé par notre peinture à eau car la gamme Seigneurie est chère et sa livraison était périmée."
+  },
+  {
+   "id": "wa-MbgltzwtXO2bYYZcsaPqkw",
+   "source": "whatsapp",
+   "date": "2026-10-15",
+   "heure": "12:35",
+   "commercial": "Leslie",
+   "point_de_vente": "Chantier SICOGI",
+   "zone": "Yopougon",
+   "type": "rdv",
+   "produits": [
+    {
+     "id": "fac",
+     "quantite": 200
+    },
+    {
+     "id": "end",
+     "quantite": 150
+    }
+   ],
+   "montant": 11025000,
+   "plus": [
+    "120 logements à peindre d'ici janvier",
+    "Conducteur de travaux très ouvert"
+   ],
+   "moins": [
+    "Compare avec seigneurie",
+    "Décision du promoteur"
+   ],
+   "suite": [
+    "Envoyer le devis demain",
+    "Organiser une démo façade sur un bloc témoin"
+   ],
+   "gps": {
+    "lat": 5.3264923095703125,
+    "lng": -4.00173282623291
+   },
+   "texte": "CR RDV\nPoint de vente : Chantier SICOGI, Yopougon\nType : rdv\nProduits : façade 200 seaux, enduit 150 sacs\nMontant : 11 025 000\n+ : 120 logements à peindre d'ici janvier, conducteur de travaux très ouvert\n- : compare avec Seigneurie, décision du promoteur\nSuite : envoyer le devis demain, organiser une démo façade sur un bloc témoin",
+   "statut": "interesse"
   }
  ],
  "positions": [
