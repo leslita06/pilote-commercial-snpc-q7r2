@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T14:57:03Z",
+ "maj": "2026-10-15T14:58:17Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -183,6 +183,38 @@
    },
    "texte": "🎙️ Compte rendu vocal, transcrit : [par tranches, 54 mots] Je veux entrer un compte rendu, donc je suis commerciale Leslie. et j'ai visité la quincaillerie générale chez Fadel Um... Appelle à Abidjan, Côte d'Ivoire, et écoute, ils sont très intéressés par la cola karo. Ils veulent commander deux tonnes de colle à carreaux immédiatement. Et très intéressant, il souhaite le commander chaque mois.\n[d'un bloc, 51 mots] Je veux entrer un compte rendu, donc je suis commercial Leslie et j'ai visité la quincaillerie générale chez Fadel à Abidjan Côte d'Ivoire. Écoute, ils sont très intéressés par la kola Karo et ils veulent commander deux tonnes de kola Karo immédiatement. Et très intéressant, ils souhaitent le commander chaque mois.",
    "resume": "Visite à la Quincaillerie Générale chez Fadel à Abidjan, très intéressés par la colle à carreaux, commande de deux tonnes souhaitée tout de suite puis chaque mois."
+  },
+  {
+   "id": "wa-A3GBdQVjUHu0GwS9CnXz5g",
+   "source": "whatsapp",
+   "vocal": true,
+   "date": "2026-10-15",
+   "heure": "14:57",
+   "commercial": "Leslie",
+   "point_de_vente": "Sycomex",
+   "zone": "Marcory Potopoto",
+   "type": "visite",
+   "statut": "pas_interesse",
+   "produits": [
+    {
+     "id": "fac",
+     "quantite": null,
+     "nom": null
+    }
+   ],
+   "montant": null,
+   "plus": [],
+   "moins": [
+    "Prix jugé deux fois trop cher par rapport à la concurrence",
+    "Retours négatifs d'autres clients sur la gamme"
+   ],
+   "suite": [],
+   "gps": {
+    "lat": 5.296687,
+    "lng": -3.984437
+   },
+   "texte": "🎙️ Compte rendu vocal, transcrit : Donc bonjour, c'est la commerciale Leslie. Je vais faire un compte rendu de ma visite à Sycomex à Marcory Potopoto. Du coup, je les ai rencontrés et j'ai proposé notre gamme de façades, mais ils n'étaient pas du tout intéressés parce qu'ils ont trouvé que notre prix était trop cher, était deux fois trop cher que la compétition. Et d'ailleurs, apparemment, il y a eu des retours d'autres clients qui n'ont pas du tout aimé notre gamme.",
+   "resume": "Visite chez Sycomex à Marcory Potopoto, gamme façade proposée, pas d'intérêt à cause du prix jugé deux fois trop élevé et de retours clients négatifs."
   }
  ],
  "positions": [
