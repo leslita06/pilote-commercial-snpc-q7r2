@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T13:25:07Z",
+ "maj": "2026-10-15T13:26:05Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -156,6 +156,13 @@
    "heure": "12:30",
    "lat": 5.3264923095703125,
    "lng": -4.00173282623291
+  },
+  {
+   "commercial": "Leslie",
+   "date": "2026-10-15",
+   "heure": "13:25",
+   "lat": 5.361783,
+   "lng": -3.957809
   }
  ],
  "recherches": [
@@ -265,10 +272,8 @@
    "date": "2026-10-15",
    "heure": "13:11",
    "gps": {
-    "lat": 5.351028,
-    "lng": -3.959773,
-    "approx": true,
-    "lieu": "Clinique Bellevue riviera 3"
+    "lat": 5.361783,
+    "lng": -3.957809
    },
    "prospects": [
     {
@@ -280,41 +285,7 @@
      "telephone": "+225 08306748",
      "lat": 5.3617832,
      "lng": -3.9578093,
-     "distance_km": 1.2,
-     "gammes": [
-      "int",
-      "end"
-     ],
-     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
-     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
-    },
-    {
-     "id": "ChIJv5DThXDtwQ8R_MPTDDDKco4",
-     "nom": "QUINCAILLERIE GENERAL CHEZ FADEL",
-     "categorie": "Magasin",
-     "adresse": "belle a lune, Abidjan, Côte d’Ivoire",
-     "quartier": "Cocody",
-     "telephone": "+225 05 06 64 3097",
-     "lat": 5.3602164,
-     "lng": -3.9674371,
-     "distance_km": 1.3,
-     "gammes": [
-      "int",
-      "col"
-     ],
-     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
-     "pitch": "Commencez par la peinture intérieure en seau de 15 L et la colle à carreaux, faciles à revendre, avec un premier lot réduit."
-    },
-    {
-     "id": "ChIJWyevAlvtwQ8RAg-ry9Q7H3c",
-     "nom": "Quincaillerie ABRI SUR",
-     "categorie": "Quincaillerie",
-     "adresse": "927P+5W5, Abidjan, Côte d’Ivoire",
-     "quartier": "Cocody",
-     "telephone": "+225 52361336",
-     "lat": 5.3628989,
-     "lng": -3.962648,
-     "distance_km": 1.4,
+     "distance_km": 0.0,
      "gammes": [
       "int",
       "end"
@@ -331,7 +302,7 @@
      "telephone": "+225 05 55 06 4955",
      "lat": 5.3636268,
      "lng": -3.9590334,
-     "distance_km": 1.4,
+     "distance_km": 0.2,
      "gammes": [
       "laq",
       "ver"
@@ -340,21 +311,56 @@
      "pitch": "Présentez la laque glycéro et le vernis bois, avec un nuancier en présentoir."
     },
     {
-     "id": "ChIJS4eqQwDtwQ8R0tv7Mo3FCF8",
-     "nom": "MAQUIS BAR LE NEFERTITI",
-     "categorie": "Bar",
-     "adresse": "CAVE BARBE BLANCHE, Rue D31, Abidjan, Côte d’Ivoire",
+     "id": "ChIJgS96IATtwQ8RGAoSs6_niLc",
+     "nom": "LE BATISSEUR",
+     "categorie": "Quincaillerie",
+     "adresse": "928Q+4V7, Abidjan, Côte d’Ivoire",
      "quartier": "Cocody",
-     "telephone": "+225 01 71 68 7502",
-     "lat": 5.3419453,
-     "lng": -3.9704433,
-     "distance_km": 1.6,
+     "telephone": "+225 07111105",
+     "lat": 5.3652882,
+     "lng": -3.9603425,
+     "distance_km": 0.5,
+     "gammes": [
+      "col",
+      "end",
+      "laq"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4.3 sur 5, 32 avis), donc fréquenté.",
+     "pitch": "Parlez marge : la colle et l'enduit tournent vite, la laque complète le panier des artisans peintres."
+    },
+    {
+     "id": "ChIJWyevAlvtwQ8RAg-ry9Q7H3c",
+     "nom": "Quincaillerie ABRI SUR",
+     "categorie": "Quincaillerie",
+     "adresse": "927P+5W5, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "+225 52361336",
+     "lat": 5.3628989,
+     "lng": -3.962648,
+     "distance_km": 0.5,
      "gammes": [
       "int",
-      "col"
+      "end"
      ],
      "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
-     "pitch": "Commencez par la peinture intérieure en seau de 15 L et la colle à carreaux, faciles à revendre, avec un premier lot réduit."
+     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
+    },
+    {
+     "id": "ChIJZVG0-cztwQ8RCwhen4mjrEE",
+     "nom": "Quincaillerie FC BARCELONA",
+     "categorie": "Quincaillerie",
+     "adresse": "926R+W88, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "",
+     "lat": 5.3622766,
+     "lng": -3.9591683,
+     "distance_km": 0.2,
+     "gammes": [
+      "int",
+      "end"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4 sur 5, 8 avis), donc fréquenté.",
+     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
     }
    ]
   }
