@@ -386,6 +386,20 @@ a.sn-tel svg.i { color: var(--sn-ok); }
 .sn-ni .sn-ti, .sn-toast .sn-ti { width: 34px; height: 34px; border-radius: 50%; color: #fff; display: grid; place-items: center; flex: none; }
 .sn-ni .sn-ti svg, .sn-toast .sn-ti svg { width: 18px; height: 18px; }
 @media (max-width: 720px) { .sn-notifs { position: fixed; left: 16px; right: 16px; width: auto; top: 110px; } }
+.sn-mcomp { background: #fff; border: 1px solid var(--sn-line); border-radius: 18px; padding: 14px; margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+.sn-mcomp .sn-mh3 { margin: 0; }
+.sn-mcomp textarea { width: 100%; box-sizing: border-box; border: 1px solid var(--sn-line); border-radius: 12px; padding: 10px; font: inherit; font-size: 15px; resize: vertical; }
+.sn-rec { display: flex; align-items: center; gap: 12px; background: var(--sn-bg); border-radius: 14px; padding: 10px; }
+.sn-rec b { display: block; font-size: 14.5px; }
+.sn-rec small { color: var(--sn-grey); font-size: 12.5px; }
+.sn-recb { width: 56px; height: 56px; border-radius: 50%; border: 0; background: #7C3AED; color: #fff; display: grid; place-items: center; flex: none; cursor: pointer; }
+.sn-recb svg { width: 26px; height: 26px; }
+.sn-recb.on { background: var(--sn-red); animation: snpulse 1.2s infinite; }
+@keyframes snpulse { 0%,100% { box-shadow: 0 0 0 0 rgba(208,18,44,.45); } 50% { box-shadow: 0 0 0 12px rgba(208,18,44,0); } }
+.sn-mcomp audio { width: 100%; }
+.sn-mnote { color: var(--sn-grey); font-size: 12px; text-align: center; }
+.sn-mcomp [hidden] { display: none !important; }
+.sn-solo .sn-tabs, .sn-solo .sn-filters, .sn-solo .sn-moisel, .sn-solo .sn-bellw { display: none !important; }
 /* Vue commercial (mobile) */
 body[data-view="moi"] .sn-filters { display: none; }
 .sn-moi { max-width: 480px; margin: 0 auto; }
@@ -561,6 +575,19 @@ body[data-view="moi"] .sn-filters { display: none; }
     <div class="sn-moi">
       <div class="sn-moisel" id="moiSel"></div>
       <div id="moiBody"></div>
+      <div class="sn-mcomp" id="moiComp">
+        <h3 class="sn-mh3"><svg class="i" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Mon compte rendu</h3>
+        <textarea id="crTxt" rows="4" placeholder="Client, ce qui s'est dit, produits, montant, prochaine étape…"></textarea>
+        <button class="sn-mbtn big go" id="crSend"><svg class="i" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Envoyer le compte rendu</button>
+        <div class="sn-rec">
+          <button class="sn-recb" id="recBtn" aria-label="Enregistrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></button>
+          <div><b id="recLab">Dicter mon compte rendu</b><small id="recSub">Appuyez pour enregistrer, appuyez à nouveau pour arrêter</small></div>
+        </div>
+        <audio id="recPlay" controls hidden></audio>
+        <button class="sn-mbtn big go" id="recSend" hidden><svg class="i" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Envoyer le vocal</button>
+        <button class="sn-mbtn big" id="prAsk"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Demander mes prospects</button>
+        <small class="sn-mnote">Tout part dans le fil WhatsApp de l'équipe : Kouassi le lit, le range et met le tableau à jour. Pour les prospects, partagez votre position juste après.</small>
+      </div>
     </div>
   </section>
 
@@ -1428,6 +1455,7 @@ function moiDefault() {
   return wa ? wa.com : COMS[0].id;
 }
 function renderMoi() {
+  if (SOLO) { S.moiSel = comFromName(SOLO); S.moiPick = true; }
   if (!S.moiPick || !COM[S.moiSel]) S.moiSel = moiDefault();
   const c = COM[S.moiSel], id = c.id;
   const d0 = T0, d1 = T0 + DAY;
@@ -1456,8 +1484,46 @@ function renderMoi() {
   h += rows.length ? rows.join("") : `<div class="sn-empty">Rien de prévu. Écrivez « PROSPECTS » sur WhatsApp avec votre position : Kouassi vous envoie les cinq points de vente les plus proches.</div>`;
   h += `<h3 class="sn-mh3">${ic("todo")}Mes visites du jour<span>${R.length}</span></h3>`;
   h += R.length ? R.map((r) => `<div class="sn-mrow"><span class="sn-mtime">${hm(r.ts)}</span><div style="min-width:0;flex:1"><b>${esc(r.pdvNom)}</b><small>${esc(TYPES[r.type] ? TYPES[r.type].lab || r.type : r.type)}${r.montant > 0 ? ", " + money(r.montant) : ""}</small></div>${r.source === "whatsapp" ? `<span class="sn-mwa">${ic("msg")}</span>` : ""}</div>`).join("") : `<div class="sn-empty">Aucun compte rendu aujourd'hui.</div>`;
-  h += `<div class="sn-macts"><a class="sn-mbtn big" target="_blank" rel="noopener" href="${wa("CR\nClient : \nQuartier : \nStatut : \nProduits : \nMontant : \nPoints positifs : \nPoints négatifs : \nProchaine étape : ")}">${ic("msg")}Envoyer un compte rendu</a><a class="sn-mbtn big go" target="_blank" rel="noopener" href="${wa("PROSPECTS")}">${ic("target")}Demander mes prospects</a><small>Le compte rendu part sur WhatsApp. Pour les prospects, partagez votre position juste après le message.</small></div>`;
   $("#moiBody").innerHTML = h;
+}
+
+/* ---------- vue commercial : un lien par commercial (?c=Prénom), compte rendu écrit ou dicté ---------- */
+const SOLO = (() => { try { return new URLSearchParams(location.search).get("c"); } catch (e) { return null; } })();
+if (SOLO) document.documentElement.classList.add("sn-solo");
+function waShare(text) { location.href = `https://wa.me/?text=${encodeURIComponent(text)}`; }
+let REC = null, CHUNKS = [], BLOB = null;
+function bindMoi() {
+  $("#crSend").onclick = () => {
+    const v = $("#crTxt").value.trim(); if (!v) { $("#crTxt").focus(); return; }
+    waShare(/^\W*cr\b/i.test(v) ? v : "CR\n" + v);
+  };
+  $("#prAsk").onclick = () => waShare("PROSPECTS");
+  $("#recBtn").onclick = async () => {
+    if (REC && REC.state === "recording") { REC.stop(); return; }
+    try {
+      const st = await navigator.mediaDevices.getUserMedia({ audio: true });
+      CHUNKS = []; REC = new MediaRecorder(st);
+      REC.ondataavailable = (e) => e.data.size && CHUNKS.push(e.data);
+      REC.onstop = () => {
+        st.getTracks().forEach((x) => x.stop());
+        BLOB = new Blob(CHUNKS, { type: REC.mimeType || "audio/webm" });
+        $("#recPlay").src = URL.createObjectURL(BLOB); $("#recPlay").hidden = false; $("#recSend").hidden = false;
+        $("#recBtn").classList.remove("on"); $("#recLab").textContent = "Vocal prêt"; $("#recSub").textContent = "Réécoutez, puis envoyez";
+      };
+      REC.start(); $("#recBtn").classList.add("on"); $("#recLab").textContent = "J'écoute…"; $("#recSub").textContent = "Appuyez pour arrêter";
+    } catch (e) { $("#recSub").textContent = "Micro non autorisé : autorisez-le dans le navigateur, ou envoyez un vocal directement dans WhatsApp."; }
+  };
+  $("#recSend").onclick = async () => {
+    if (!BLOB) return;
+    const ext = /mp4|aac|m4a/.test(BLOB.type) ? "m4a" : /ogg/.test(BLOB.type) ? "ogg" : "webm";
+    const f = new File([BLOB], `compte-rendu-${hm(Date.now()).replace(":", "h")}.${ext}`, { type: BLOB.type });
+    if (navigator.canShare && navigator.canShare({ files: [f] })) {
+      try { await navigator.share({ files: [f], text: "CR vocal" }); $("#recSub").textContent = "Envoyé dans WhatsApp, Kouassi le transcrit."; } catch (e) { /* partage annulé */ }
+    } else {
+      const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = f.name; a.click();
+      $("#recSub").textContent = "Ce navigateur ne sait pas partager le fichier : il est téléchargé, joignez-le au fil WhatsApp.";
+    }
+  };
 }
 
 /* ---------- navigation ---------- */
@@ -1468,7 +1534,7 @@ function show(v) {
   document.body.dataset.view = v;
   $$(".sn-tab").forEach((t) => t.classList.toggle("on", t.dataset.v === v));
   $$(".sn-view").forEach((s) => s.classList.toggle("on", s.id === "v-" + v));
-  try { history.replaceState(null, "", "#" + VIEWS[v]); } catch (e) { /* ignoré */ }
+  try { if (!SOLO) history.replaceState(null, "", "#" + VIEWS[v]); } catch (e) { /* ignoré */ }
   renderView(v);
   window.scrollTo({ top: 0 });
   setTimeout(() => { Object.values(MAPS).forEach((m) => { m.invalidateSize(); if (m._fit) m._fit(); }); if (v === "dash") fitDashMap(); if (v === "team") fitDayMap(); }, 80);
@@ -1895,7 +1961,8 @@ function init() {
   bind();
   buildFilterUi();
   const h = location.hash.replace("#", "");
-  const v = Object.keys(VIEWS).find((k) => VIEWS[k] === h) || "dash";
+  const v = SOLO ? "moi" : Object.keys(VIEWS).find((k) => VIEWS[k] === h) || "dash";
+  bindMoi();
   show(v);
   syncTerrain();
   setInterval(syncTerrain, POLL);
