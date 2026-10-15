@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T13:26:05Z",
+ "maj": "2026-10-15T13:28:34Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -147,6 +147,42 @@
    },
    "texte": "🎙️ Compte rendu vocal, transcrit : J'étais à Abobo et j'ai croisé le propriétaire d'une promotion immobilière qui s'appelle Bou de Miel et ils ne sont pas du tout intéressés par nos produits parce qu'ils disent qu'ils ont déjà testé, la qualité n'est pas bonne, la peinture ne tient pas et que c'est trop cher et qu'il n'y a pas de point de vente aussi très proche de leur lieu.",
    "resume": "Rencontre à Abobo avec le propriétaire de la promotion immobilière Bou de Miel, qui refuse nos produits pour qualité, prix et éloignement."
+  },
+  {
+   "id": "wa-4_r3qPA2XaGxOMkd4KN-mw",
+   "source": "whatsapp",
+   "vocal": true,
+   "date": "2026-10-15",
+   "heure": "13:27",
+   "commercial": "Leslie",
+   "point_de_vente": "Quincaillerie Générale chez Fadel",
+   "zone": null,
+   "type": "visite",
+   "statut": "interesse",
+   "produits": [
+    {
+     "id": "col",
+     "quantite": null,
+     "nom": null
+    }
+   ],
+   "montant": null,
+   "plus": [
+    "Très intéressés par la colle à carreaux",
+    "Veulent commander deux tonnes immédiatement",
+    "Souhaitent commander chaque mois"
+   ],
+   "moins": [],
+   "suite": [
+    "Prendre la commande de deux tonnes de colle à carreaux",
+    "Mettre en place une commande mensuelle"
+   ],
+   "gps": {
+    "lat": 5.361783,
+    "lng": -3.957809
+   },
+   "texte": "🎙️ Compte rendu vocal, transcrit : [par tranches, 54 mots] Je veux entrer un compte rendu, donc je suis commerciale Leslie. et j'ai visité la quincaillerie générale chez Fadel Um... Appelle à Abidjan, Côte d'Ivoire, et écoute, ils sont très intéressés par la cola karo. Ils veulent commander deux tonnes de colle à carreaux immédiatement. Et très intéressant, il souhaite le commander chaque mois.\n[d'un bloc, 51 mots] Je veux entrer un compte rendu, donc je suis commercial Leslie et j'ai visité la quincaillerie générale chez Fadel à Abidjan Côte d'Ivoire. Écoute, ils sont très intéressés par la kola Karo et ils veulent commander deux tonnes de kola Karo immédiatement. Et très intéressant, ils souhaitent le commander chaque mois.",
+   "resume": "Visite à la Quincaillerie Générale chez Fadel à Abidjan, très intéressés par la colle à carreaux, commande de deux tonnes souhaitée tout de suite puis chaque mois."
   }
  ],
  "positions": [
@@ -176,23 +212,6 @@
     "lng": -4.00173282623291
    },
    "prospects": [
-    {
-     "id": "ChIJj7MRE7HrwQ8R3TMoT_16yjg",
-     "nom": "Beauty Reference chez Awa",
-     "categorie": "Salon de manucure",
-     "adresse": "8XPX+XVR, Abidjan, Côte d’Ivoire",
-     "quartier": "Cocody",
-     "telephone": "+225 07 07 36 9247",
-     "lat": 5.3374375,
-     "lng": -4.0003125,
-     "distance_km": 1.2,
-     "gammes": [
-      "int",
-      "end"
-     ],
-     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
-     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
-    },
     {
      "id": "ChIJTbo35P3rwQ8ROA2_iu_h63A",
      "nom": "Quincaillerie Generale",
@@ -247,22 +266,38 @@
      "pitch": "Mettez en avant l'enduit et la colle à carreaux en sacs, avec un prix dépôt et un réassort rapide depuis Koumassi."
     },
     {
-     "id": "ChIJA5uyOQDrwQ8R6-ZtEdYKkDc",
-     "nom": "As Materiaux quincaillerie",
-     "categorie": "Grossiste",
-     "adresse": "8XGJ+35R, Abidjan, Côte d’Ivoire",
+     "id": "ChIJn-TrVqXrwQ8RmN3qGDjPkjw",
+     "nom": "QUINCAILLERIE GÉNÉRAL CHEZ NAZIROU",
+     "categorie": "Quincaillerie",
+     "adresse": "Abidjan route zoo près de la pharmacie HMA, Abidjan, Côte d’Ivoire",
      "quartier": "Le Plateau",
-     "telephone": "+225 07 89 75 8988",
+     "telephone": "+225 07 07 05 2821",
      "lat": 5.3252258,
      "lng": -4.019603,
      "distance_km": 2.0,
      "gammes": [
-      "end",
-      "col",
-      "fac"
+      "fac",
+      "int"
      ],
-     "pourquoi": "Dépôt de matériaux : il sert les maçons et les chantiers du quartier.",
-     "pitch": "Mettez en avant l'enduit et la colle à carreaux en sacs, avec un prix dépôt et un réassort rapide depuis Koumassi."
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
+     "pitch": "Montrez le nuancier façade ÉLÉPHORCE : la saison des ravalements arrive, et ses clients repeignent avant les fêtes."
+    },
+    {
+     "id": "ChIJzTxYKQDrwQ8RPKxTvMTKg0g",
+     "nom": "QUINCAILLERIE CHEZ KASS 1ER",
+     "categorie": "Quincaillerie",
+     "adresse": "Abidjan, Côte d’Ivoire",
+     "quartier": "Treichville",
+     "telephone": "+225 01 42 46 7795",
+     "lat": 5.3092186,
+     "lng": -4.0085528,
+     "distance_km": 2.1,
+     "gammes": [
+      "int",
+      "col"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
+     "pitch": "Commencez par la peinture intérieure en seau de 15 L et la colle à carreaux, faciles à revendre, avec un premier lot réduit."
     }
    ]
   },
