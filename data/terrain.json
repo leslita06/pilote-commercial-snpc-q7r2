@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T13:08:04Z",
+ "maj": "2026-10-15T13:12:08Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -258,6 +258,14 @@
      "pitch": "Mettez en avant l'enduit et la colle à carreaux en sacs, avec un prix dépôt et un réassort rapide depuis Koumassi."
     }
    ]
+  },
+  {
+   "id": "pr-5jG7uzMqVh-tV_PmL2u4gA",
+   "commercial": "Leslie",
+   "date": "2026-10-15",
+   "heure": "13:11",
+   "gps": null,
+   "prospects": []
   }
  ]
 }
