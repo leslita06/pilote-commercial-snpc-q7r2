@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T12:30:10Z",
+ "maj": "2026-10-15T12:31:04Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -44,6 +44,14 @@
    "commercial": "Leslie",
    "date": "2026-10-15",
    "heure": "12:28",
+   "gps": null,
+   "prospects": []
+  },
+  {
+   "id": "pr-zdb68qZaXl-LaPUpvNG5Qg",
+   "commercial": "Leslie",
+   "date": "2026-10-15",
+   "heure": "12:30",
    "gps": null,
    "prospects": []
   }
