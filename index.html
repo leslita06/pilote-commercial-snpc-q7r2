@@ -369,6 +369,42 @@ a.sn-tel svg.i { color: var(--sn-ok); }
 .sn-prq small.sn-sl svg.i { width: 13px; height: 13px; }
 @media (max-width: 1100px) { .sn-cf, .sn-prtop { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 720px) { .sn-cfr { grid-template-columns: 30px 92px minmax(0, 1fr) 34px; gap: 8px; } .sn-cfi { width: 30px; height: 30px; } .sn-cfn { font-size: 17px; } }
+
+@media (max-width: 1600px) { .sn-powered { display: none; } }
+/* Vue commercial (mobile) */
+body[data-view="moi"] .sn-filters { display: none; }
+.sn-moi { max-width: 480px; margin: 0 auto; }
+.sn-moisel { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 12px; }
+.sn-moisel button { display: flex; align-items: center; gap: 6px; border: 1px solid var(--sn-line); background: #fff; border-radius: 99px; padding: 4px 12px 4px 4px; font: inherit; font-size: 13px; cursor: pointer; flex: none; }
+.sn-moisel button.on { border-color: var(--sn-red); background: var(--sn-red-pale); font-weight: 600; }
+.sn-mhead { display: flex; align-items: center; gap: 12px; background: var(--sn-navy); color: #fff; border-radius: 18px 18px 0 0; padding: 16px; }
+.sn-mhead b { display: block; font-size: 20px; }
+.sn-mhead small { display: block; opacity: .75; font-size: 12.5px; }
+.sn-mkpis { display: grid; grid-template-columns: 1fr 1fr 1.4fr; background: #fff; border: 1px solid var(--sn-line); border-top: 0; border-radius: 0 0 18px 18px; margin-bottom: 14px; }
+.sn-mkpis div { padding: 12px; text-align: center; border-left: 1px solid var(--sn-line); }
+.sn-mkpis div:first-child { border-left: 0; }
+.sn-mkpis small { display: block; color: var(--sn-grey); font-size: 12px; }
+.sn-mkpis b { font-size: 19px; }
+.sn-mnext { background: #fff; border: 2px solid var(--sn-red); border-radius: 18px; padding: 14px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px; }
+.sn-mnext > b { font-size: 18px; }
+.sn-mnext p { margin: 0; color: var(--sn-grey); font-size: 13.5px; }
+.sn-mbtns { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; }
+.sn-mbtn { flex: 1; min-width: 120px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 12px; border-radius: 12px; background: var(--sn-bg); color: var(--sn-navy); font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid var(--sn-line); }
+.sn-mbtn.go { background: var(--sn-red); color: #fff; border-color: var(--sn-red); }
+.sn-mbtn.off { opacity: .5; }
+.sn-mbtn.big { padding: 14px; font-size: 15px; }
+.sn-mh3 { display: flex; align-items: center; gap: 8px; font-size: 15px; margin: 18px 0 8px; }
+.sn-mh3 span { margin-left: auto; background: var(--sn-bg); border-radius: 99px; padding: 1px 9px; font-size: 12.5px; }
+.sn-mrow { display: flex; gap: 10px; align-items: flex-start; background: #fff; border: 1px solid var(--sn-line); border-radius: 14px; padding: 12px; margin-bottom: 8px; }
+.sn-mrow b { display: block; font-size: 14.5px; }
+.sn-mrow small { display: block; color: var(--sn-grey); font-size: 12.5px; }
+.sn-mrow.done { opacity: .55; }
+.sn-mrow.done b { text-decoration: line-through; }
+.sn-mtime { font-weight: 700; font-size: 13px; color: var(--sn-navy); min-width: 42px; padding-top: 1px; }
+.sn-mchk input { width: 22px; height: 22px; accent-color: var(--sn-red); margin: 0; }
+.sn-mwa { color: #25D366; margin-left: auto; }
+.sn-macts { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; }
+.sn-macts small { color: var(--sn-grey); font-size: 12px; text-align: center; }
 </style>
 </head>
 <body>
@@ -382,6 +418,7 @@ a.sn-tel svg.i { color: var(--sn-ok); }
       <button class="sn-tab on" data-v="dash"><svg class="i" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Tableau de bord</button>
       <button class="sn-tab" data-v="team"><svg class="i" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Équipe</button>
       <button class="sn-tab" data-v="cr"><svg class="i" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Comptes rendus<span class="sn-badge" id="crBadge" hidden>1</span></button>
+      <button class="sn-tab" data-v="moi"><svg class="i" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>Commercial</button>
     </nav>
     <div class="sn-right">
       <div class="sn-sync off" id="sync"><i class="sn-live"></i><svg class="sn-wa-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.63-.07.17-.2.72-.84.92-1.13.19-.29.38-.24.65-.14.26.1 1.69.8 1.98.94.29.14.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg><span id="syncTxt">Connexion à WhatsApp</span></div>
@@ -500,6 +537,14 @@ a.sn-tel svg.i { color: var(--sn-ok); }
         <div class="sn-ch"><h2><span class="sn-ci r"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span id="prTitle-team">Prospects</span></h2><span class="sn-sub">les cinq prospects réels les plus proches, envoyés par Kouassi sur WhatsApp</span></div>
         <div id="pr-team"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Vue commercial (mobile) -->
+  <section class="sn-view" id="v-moi">
+    <div class="sn-moi">
+      <div class="sn-moisel" id="moiSel"></div>
+      <div id="moiBody"></div>
     </div>
   </section>
 
@@ -1343,11 +1388,52 @@ function alerts() {
   return L.sort((a, b) => a.sev - b.sev || b.montant - a.montant);
 }
 
+/* =====================================================================
+   VUE COMMERCIAL (mobile) : sa journée, ses chiffres, ses visites à faire
+   ===================================================================== */
+function moiDefault() {
+  const wa = S.recherches.concat(S.recs.filter((r) => r.source === "whatsapp")).sort((a, b) => b.ts - a.ts)[0];
+  return wa ? wa.com : COMS[0].id;
+}
+function renderMoi() {
+  if (!S.moiPick || !COM[S.moiSel]) S.moiSel = moiDefault();
+  const c = COM[S.moiSel], id = c.id;
+  const d0 = T0, d1 = T0 + DAY;
+  const who = COMS.filter((x) => x.wa || S.recs.some((r) => r.com === x.id) || S.recherches.some((r) => r.com === x.id));
+  $("#moiSel").innerHTML = who.map((x) => `<button data-moi="${esc(x.id)}" class="${x.id === id ? "on" : ""}">${avatar(x.id)}<span>${esc(comName(x.id).split(" ")[0])}</span></button>`).join("");
+  const R = S.recs.filter((r) => r.com === id && r.ts >= d0 && r.ts < d1).sort((a, b) => b.ts - a.ts);
+  const st = statsOf(R);
+  const visites = [];
+  S.recherches.filter((x) => x.com === id && x.ts >= d0 && x.ts < d1).sort((a, b) => b.ts - a.ts).forEach((x) => x.prospects.forEach((p) => {
+    const k = "pv:" + norm(p.nom || "");
+    if (!visites.some((v) => v.k === k) && !R.some((r) => norm(r.pdvNom) === norm(p.nom || ""))) visites.push({ k, p, ts: x.ts });
+  }));
+  const rdv = S.rdv.filter((r) => r.com === id && r.statut === "a_venir").sort((a, b) => a.ts - b.ts);
+  const reste = visites.filter((v) => !S.done[v.k]);
+  const btns = (p) => `<div class="sn-mbtns">${p.telephone ? `<a class="sn-mbtn" href="tel:${esc(String(p.telephone).replace(/[^\d+]/g, ""))}">${ic("phone")}Appeler</a>` : `<span class="sn-mbtn off">${ic("phone")}Pas de numéro</span>`}${p.lat != null ? `<a class="sn-mbtn go" target="_blank" rel="noopener" href="${mapsUrl(p.lat, p.lng)}">${ic("nav")}Itinéraire</a>` : ""}</div>`;
+  const next = reste[0];
+  const gam = (p) => (p.gammes || []).length ? `<div class="sn-prods">${p.gammes.map((g) => `<span class="sn-prod"><i style="background:${PROD_COL[g] || PROD_COL.autre}"></i>${esc(gammeName(g))}</span>`).join("")}</div>` : "";
+  const dist = (p) => p.distance_km != null ? `à ${dec(+p.distance_km, 1)} km` : "";
+  const wa = (txt) => `https://wa.me/?text=${encodeURIComponent(txt)}`;
+  let h = `<div class="sn-mhead">${avatar(id, "lg")}<div><small>${cap(dLong(d0))}, ${hFr(now())}</small><b>Bonjour ${esc(c.prenom)}</b><small>${esc(c.zone)}</small></div></div>
+  <div class="sn-mkpis"><div><small>Visites</small><b>${st.visites}</b></div><div><small>Commandes</small><b>${st.cmd}</b></div><div><small>Montant</small><b>${money(st.montant)}</b></div></div>`;
+  if (next) h += `<div class="sn-mnext"><small class="sn-sl">${ic("target")}Ma prochaine visite</small><b>${esc(next.p.nom || "Prospect")}</b><p>${esc([dist(next.p), next.p.adresse].filter(Boolean).join(", "))}</p>${gam(next.p)}${next.p.pitch ? `<div class="sn-prq pitch"><small class="sn-sl">${ic("msg")}Le pitch de Kouassi</small><p>${esc(next.p.pitch)}</p></div>` : ""}${btns(next.p)}</div>`;
+  h += `<h3 class="sn-mh3">${ic("pin")}À visiter aujourd'hui<span>${reste.length + rdv.length}</span></h3>`;
+  const rows = rdv.map((r) => `<div class="sn-mrow"><span class="sn-mtime">${hm(r.ts)}</span><div><b>${esc(pdvName(r.pdv))}</b><small>Rendez-vous prévu</small></div></div>`)
+    .concat(visites.map((v) => `<div class="sn-mrow ${S.done[v.k] ? "done" : ""}"><label class="sn-mchk"><input type="checkbox" data-todo="${esc(v.k)}" ${S.done[v.k] ? "checked" : ""}><span></span></label><div style="min-width:0;flex:1"><b>${esc(v.p.nom || "Prospect")}</b><small>${esc(["Prospect de Kouassi", dist(v.p)].filter(Boolean).join(", "))}</small>${btns(v.p)}</div></div>`));
+  h += rows.length ? rows.join("") : `<div class="sn-empty">Rien de prévu. Écrivez « PROSPECTS » sur WhatsApp avec votre position : Kouassi vous envoie les cinq points de vente les plus proches.</div>`;
+  h += `<h3 class="sn-mh3">${ic("todo")}Mes visites du jour<span>${R.length}</span></h3>`;
+  h += R.length ? R.map((r) => `<div class="sn-mrow"><span class="sn-mtime">${hm(r.ts)}</span><div style="min-width:0;flex:1"><b>${esc(r.pdvNom)}</b><small>${esc(TYPES[r.type] ? TYPES[r.type].lab || r.type : r.type)}${r.montant > 0 ? ", " + money(r.montant) : ""}</small></div>${r.source === "whatsapp" ? `<span class="sn-mwa">${ic("msg")}</span>` : ""}</div>`).join("") : `<div class="sn-empty">Aucun compte rendu aujourd'hui.</div>`;
+  h += `<div class="sn-macts"><a class="sn-mbtn big" target="_blank" rel="noopener" href="${wa("CR\nClient : \nQuartier : \nStatut : \nProduits : \nMontant : \nPoints positifs : \nPoints négatifs : \nProchaine étape : ")}">${ic("msg")}Envoyer un compte rendu</a><a class="sn-mbtn big go" target="_blank" rel="noopener" href="${wa("PROSPECTS")}">${ic("target")}Demander mes prospects</a><small>Le compte rendu part sur WhatsApp. Pour les prospects, partagez votre position juste après le message.</small></div>`;
+  $("#moiBody").innerHTML = h;
+}
+
 /* ---------- navigation ---------- */
-const VIEWS = { dash: "tableau-de-bord", team: "equipe", cr: "comptes-rendus" };
+const VIEWS = { dash: "tableau-de-bord", team: "equipe", moi: "commercial", cr: "comptes-rendus" };
 function show(v) {
   if (!VIEWS[v]) v = "dash";
   S.view = v;
+  document.body.dataset.view = v;
   $$(".sn-tab").forEach((t) => t.classList.toggle("on", t.dataset.v === v));
   $$(".sn-view").forEach((s) => s.classList.toggle("on", s.id === "v-" + v));
   try { history.replaceState(null, "", "#" + VIEWS[v]); } catch (e) { /* ignoré */ }
@@ -1355,7 +1441,7 @@ function show(v) {
   window.scrollTo({ top: 0 });
   setTimeout(() => { Object.values(MAPS).forEach((m) => { m.invalidateSize(); if (m._fit) m._fit(); }); if (v === "dash") fitDashMap(); if (v === "team") fitDayMap(); }, 80);
 }
-function renderView(v) { if (v === "dash") renderDash(); else if (v === "team") renderTeam(); else if (v === "cr") renderCR(); }
+function renderView(v) { if (v === "dash") renderDash(); else if (v === "team") renderTeam(); else if (v === "cr") renderCR(); else if (v === "moi") renderMoi(); }
 function renderAll() { renderHeader(); renderView(S.view); }
 function renderHeader() {
   $("#clock").textContent = hm(now());
@@ -1734,11 +1820,12 @@ function renderHeaderBadge() { const unseen = S.recs.filter((r) => r.source === 
    ===================================================================== */
 function bind() {
   document.addEventListener("click", (e) => {
-    const t = e.target.closest("[data-prsel],[data-v],[data-goto],[data-p],[data-rm],#fReset,[data-tr],[data-tsel],[data-day],[data-z]");
+    const t = e.target.closest("[data-moi],[data-prsel],[data-v],[data-goto],[data-p],[data-rm],#fReset,[data-tr],[data-tsel],[data-day],[data-z]");
     // fermer les menus ouverts quand on clique ailleurs
     $$(".sn-dd[open]").forEach((d) => { if (!d.contains(e.target)) d.open = false; });
     if (!t) return;
     if (t.dataset.v && t.classList.contains("sn-tab")) return show(t.dataset.v);
+    if (t.dataset.moi) { S.moiSel = t.dataset.moi; S.moiPick = true; return renderMoi(); }
     if (t.dataset.goto) { show(t.dataset.goto); if (t.dataset.anchor) setTimeout(() => { const a = $("#" + t.dataset.anchor); if (a) a.scrollIntoView({ behavior: "smooth" }); }, 150); return; }
     if (t.dataset.prsel) { S.prSel[t.dataset.prkey] = t.dataset.prsel; renderProspects(t.dataset.prkey, t.dataset.prkey === "dash" ? searchesFor(F.com.size ? [...F.com] : null) : searchesFor([S.teamSel])); return; }
     if (t.dataset.p) { F.period = t.dataset.p; if (F.period === "custom" && !F.from) { F.from = isoDay(T0 - 6 * DAY); F.to = isoDay(T0); } return onFilterChange(); }
@@ -1762,7 +1849,7 @@ function bind() {
     if (t.dataset.f) { const set = F[t.dataset.f]; if (t.checked) set.add(t.value); else set.delete(t.value); const dd = t.closest(".sn-dd").dataset.dd; onFilterChange(); $(`.sn-dd[data-dd="${dd}"]`).open = true; return; }
     if (t.id === "fFrom" || t.id === "fTo") { F.from = $("#fFrom").value; F.to = $("#fTo").value; return onFilterChange(); }
     if (t.id === "fMin" || t.id === "fMax") { const v = (x) => x.value === "" ? null : Math.max(0, +x.value); F.min = v($("#fMin")); F.max = v($("#fMax")); F.tranche = null; onFilterChange(); $('.sn-dd[data-dd="amt"]').open = true; return; }
-    if (t.dataset.todo) { S.done[t.dataset.todo] = t.checked; return; }
+    if (t.dataset.todo) { S.done[t.dataset.todo] = t.checked; if (S.view === "moi") renderMoi(); return; }
     if (t.id === "dayInput") { const d = fromIso(t.value); if (d != null) { S.teamDay = Math.min(0, Math.round((d - T0) / DAY)); renderDay(); } }
   });
   document.addEventListener("toggle", (e) => { if (e.target.classList && e.target.classList.contains("sn-dd") && e.target.open) $$(".sn-dd[open]").forEach((d) => { if (d !== e.target) d.open = false; }); }, true);
