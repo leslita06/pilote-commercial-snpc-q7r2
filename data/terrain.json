@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T13:35:07Z",
+ "maj": "2026-10-15T14:56:04Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -213,6 +213,13 @@
    "heure": "13:34",
    "lat": 5.295116901397705,
    "lng": -3.9821667671203613
+  },
+  {
+   "commercial": "Leslie",
+   "date": "2026-10-15",
+   "heure": "14:55",
+   "lat": 5.295410633087158,
+   "lng": -3.9830145835876465
   }
  ],
  "recherches": [
@@ -508,6 +515,104 @@
      ],
      "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4 sur 5, 8 avis), donc fréquenté.",
      "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
+    }
+   ]
+  },
+  {
+   "id": "pr-d_tQYVC2VjWhy6S95or1Hg",
+   "commercial": "Leslie",
+   "date": "2026-10-15",
+   "heure": "14:55",
+   "gps": {
+    "lat": 5.295410633087158,
+    "lng": -3.9830145835876465
+   },
+   "prospects": [
+    {
+     "id": "ChIJwVwabKruwQ8ROzp2HEGNbIA",
+     "nom": "INGCO-CI",
+     "categorie": "Quincaillerie",
+     "adresse": "Abidjan, Côte d’Ivoire",
+     "quartier": "Marcory",
+     "telephone": "+225 27 21 7 51915",
+     "lat": 5.2966875,
+     "lng": -3.9844375,
+     "distance_km": 0.2,
+     "gammes": [
+      "fac",
+      "int"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4.1 sur 5, 234 avis), donc fréquenté.",
+     "pitch": "Montrez le nuancier façade ÉLÉPHORCE : la saison des ravalements arrive, et ses clients repeignent avant les fêtes."
+    },
+    {
+     "id": "ChIJXTJK2wHswQ8RnhXP1gm6hRI",
+     "nom": "Batiplus Abidjan",
+     "categorie": "Quincaillerie",
+     "adresse": "72X8+48X, Bd Valéry Giscard d'Estaing, Abidjan, Côte d’Ivoire",
+     "quartier": "Marcory",
+     "telephone": "+225 27 21 7 58602",
+     "lat": 5.2978724,
+     "lng": -3.9841382,
+     "distance_km": 0.3,
+     "gammes": [
+      "int",
+      "end"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4 sur 5, 99 avis), donc fréquenté.",
+     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
+    },
+    {
+     "id": "ChIJPeL5IKbuwQ8REeL1vtA3Ib0",
+     "nom": "General metal construction",
+     "categorie": "Magasin de materiaux de construction",
+     "adresse": "72WC+2FV, Abidjan, Côte d’Ivoire",
+     "quartier": "Marcory",
+     "telephone": "+225 05 74 54 2154",
+     "lat": 5.2951212,
+     "lng": -3.9788234,
+     "distance_km": 0.5,
+     "gammes": [
+      "end",
+      "col",
+      "fac"
+     ],
+     "pourquoi": "Dépôt de matériaux : il sert les maçons et les chantiers du quartier. Bien noté sur Google (3.5 sur 5, 23 avis), donc fréquenté.",
+     "pitch": "Mettez en avant l'enduit et la colle à carreaux en sacs, avec un prix dépôt et un réassort rapide depuis Koumassi."
+    },
+    {
+     "id": "ChIJRSl5h6buwQ8RtPCj5x6YN9k",
+     "nom": "Sicomex",
+     "categorie": "Marchand.e d'articles en fer",
+     "adresse": "72VF+4XF, Marcory Potopoto, Abidjan, Côte d’Ivoire",
+     "quartier": "Koumassi",
+     "telephone": "+225 05 06 59 9510",
+     "lat": 5.2928109,
+     "lng": -3.9750669,
+     "distance_km": 0.9,
+     "gammes": [
+      "fac",
+      "int"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
+     "pitch": "Montrez le nuancier façade ÉLÉPHORCE : la saison des ravalements arrive, et ses clients repeignent avant les fêtes."
+    },
+    {
+     "id": "ChIJrfr9w-ztwQ8RtXnyFA5Jobk",
+     "nom": "Quincaillerie CIDMAC",
+     "categorie": "Quincaillerie",
+     "adresse": "8237+H5P, Av. de la TSF, Abidjan, Côte d’Ivoire",
+     "quartier": "Marcory",
+     "telephone": "+225 27 21 2 69572",
+     "lat": 5.3039731,
+     "lng": -3.9870511,
+     "distance_km": 1.1,
+     "gammes": [
+      "fac",
+      "int"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (4 sur 5, 27 avis), donc fréquenté.",
+     "pitch": "Montrez le nuancier façade ÉLÉPHORCE : la saison des ravalements arrive, et ses clients repeignent avant les fêtes."
     }
    ]
   }
