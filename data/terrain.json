@@ -1,5 +1,42 @@
 {
- "maj": "2026-10-15T11:33:07Z",
- "comptes_rendus": [],
- "positions": []
+ "maj": "2026-10-15T11:52:06Z",
+ "comptes_rendus": [
+  {
+   "id": "wa-PCkDrlnBUh21kAz652MdQA",
+   "source": "whatsapp",
+   "date": "2026-10-15",
+   "heure": "11:33",
+   "commercial": "Leslie",
+   "point_de_vente": "Quincaillerie Bénédiction",
+   "zone": "Yopougon",
+   "type": "visite",
+   "produits": [
+    {
+     "id": "fac",
+     "quantite": 10
+    },
+    {
+     "id": "end",
+     "quantite": 20
+    }
+   ],
+   "montant": 650000,
+   "plus": [
+    "Bon accueil",
+    "Veut tester la façade"
+   ],
+   "moins": [
+    "Royal moins cher"
+   ],
+   "suite": [
+    "Rappeler jeudi",
+    "Livrer un échantillon"
+   ],
+   "gps": null,
+   "texte": "CR VISITE\nPoint de vente : Quincaillerie Bénédiction, Yopougon\nType : visite\nProduits : façade 10 seaux, enduit 20 sacs\nMontant : 650 000\n+ : bon accueil, veut tester la façade\n- : Royal moins cher\nSuite : rappeler jeudi, livrer un échantillon",
+   "statut": "interesse"
+  }
+ ],
+ "positions": [],
+ "recherches": []
 }
