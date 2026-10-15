@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-15T12:31:04Z",
+ "maj": "2026-10-15T12:33:27Z",
  "comptes_rendus": [
   {
    "id": "wa-PCkDrlnBUh21kAz652MdQA",
@@ -35,25 +35,152 @@
    "gps": null,
    "texte": "CR VISITE\nPoint de vente : Quincaillerie Bénédiction, Yopougon\nType : visite\nProduits : façade 10 seaux, enduit 20 sacs\nMontant : 650 000\n+ : bon accueil, veut tester la façade\n- : Royal moins cher\nSuite : rappeler jeudi, livrer un échantillon",
    "statut": "interesse"
+  },
+  {
+   "id": "wa-_fTI-7IgWwSWvuctJHgw6Q",
+   "source": "whatsapp",
+   "vocal": true,
+   "date": "2026-10-15",
+   "heure": "12:32",
+   "commercial": "Leslie",
+   "point_de_vente": "Quincaillerie immeuble MAB",
+   "zone": null,
+   "type": "visite",
+   "statut": "interesse",
+   "produits": [
+    {
+     "id": "int",
+     "quantite": null,
+     "nom": null
+    }
+   ],
+   "montant": null,
+   "plus": [
+    "Une personne est intéressée par la gamme ÉLÉPHORCE",
+    "Il aime bien la peinture à eau",
+    "La gamme Seigneurie est jugée très chère"
+   ],
+   "moins": [
+    "Des produits Seigneurie périmés avaient été livrés à la quincaillerie"
+   ],
+   "suite": [],
+   "gps": {
+    "lat": 5.3264923095703125,
+    "lng": -4.00173282623291
+   },
+   "texte": "🎙️ Compte rendu vocal, transcrit : J'aimerais faire aussi un compte rendu sur la visite à la quincaillerie immeuble MAB où justement il y a quelqu'un qui est intéressé par notre gamme de peinture parce que justement la gamme Seigneurie est très chère et d'ailleurs il avait été livré des gammes Seigneurie complètement périmées, c'est pour ça qu'il aime bien notre peinture à eau. Et ça c'est la commerciale Leslie qui t'a envoyé ce compte rendu.",
+   "resume": "Visite à la quincaillerie immeuble MAB, où un interlocuteur est intéressé par notre peinture à eau car la gamme Seigneurie est chère et sa livraison était périmée."
   }
  ],
- "positions": [],
- "recherches": [
+ "positions": [
   {
-   "id": "pr-aH3Jk6xDVsaNHcghQuhnZw",
    "commercial": "Leslie",
    "date": "2026-10-15",
-   "heure": "12:28",
-   "gps": null,
-   "prospects": []
-  },
+   "heure": "12:30",
+   "lat": 5.3264923095703125,
+   "lng": -4.00173282623291
+  }
+ ],
+ "recherches": [
   {
    "id": "pr-zdb68qZaXl-LaPUpvNG5Qg",
    "commercial": "Leslie",
    "date": "2026-10-15",
    "heure": "12:30",
-   "gps": null,
-   "prospects": []
+   "gps": {
+    "lat": 5.3264923095703125,
+    "lng": -4.00173282623291
+   },
+   "prospects": [
+    {
+     "id": "ChIJj7MRE7HrwQ8R3TMoT_16yjg",
+     "nom": "Beauty Reference chez Awa",
+     "categorie": "Salon de manucure",
+     "adresse": "8XPX+XVR, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "+225 07 07 36 9247",
+     "lat": 5.3374375,
+     "lng": -4.0003125,
+     "distance_km": 1.2,
+     "gammes": [
+      "int",
+      "end"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
+     "pitch": "Demandez-lui ce qui sort le plus en rayon, puis proposez un lot découverte intérieur et enduit, payable à la deuxième commande."
+    },
+    {
+     "id": "ChIJTbo35P3rwQ8ROA2_iu_h63A",
+     "nom": "Quincaillerie Generale",
+     "categorie": "Quincaillerie",
+     "adresse": "8XQX+56V, Rue des Papayers, Abidjan, Côte d’Ivoire",
+     "quartier": "Cocody",
+     "telephone": "+225 59486222",
+     "lat": 5.3379792,
+     "lng": -4.0019569,
+     "distance_km": 1.3,
+     "gammes": [
+      "fac",
+      "int"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans. Bien noté sur Google (3.5 sur 5, 8 avis), donc fréquenté.",
+     "pitch": "Montrez le nuancier façade ÉLÉPHORCE : la saison des ravalements arrive, et ses clients repeignent avant les fêtes."
+    },
+    {
+     "id": "ChIJBfoXkVPrwQ8RwUpIU1TKyKs",
+     "nom": "ETS MAZA (Quincaillerie du Plateau)",
+     "categorie": "Quincaillerie",
+     "adresse": "8XCJ+FPC, Av. Jean Delafosse, Abidjan, Côte d’Ivoire",
+     "quartier": "Le Plateau",
+     "telephone": "+225 20323678",
+     "lat": 5.3211758,
+     "lng": -4.0182342,
+     "distance_km": 1.9,
+     "gammes": [
+      "col",
+      "end",
+      "laq"
+     ],
+     "pourquoi": "Quincaillerie de quartier : clientèle de particuliers et de petits artisans.",
+     "pitch": "Parlez marge : la colle et l'enduit tournent vite, la laque complète le panier des artisans peintres."
+    },
+    {
+     "id": "ChIJz21Z0S7rwQ8R9YXNZPJB440",
+     "nom": "QUINCAILLERIE TECHNOMETAL",
+     "categorie": "Grossiste en matériaux de construction",
+     "adresse": "03BP1175ABIDJAN03, Abidjan, Côte d’Ivoire",
+     "quartier": "Le Plateau",
+     "telephone": "+225 07 77 97 1640",
+     "lat": 5.3252258,
+     "lng": -4.019603,
+     "distance_km": 2.0,
+     "gammes": [
+      "end",
+      "col",
+      "fac"
+     ],
+     "pourquoi": "Dépôt de matériaux : il sert les maçons et les chantiers du quartier.",
+     "pitch": "Mettez en avant l'enduit et la colle à carreaux en sacs, avec un prix dépôt et un réassort rapide depuis Koumassi."
+    },
+    {
+     "id": "ChIJA5uyOQDrwQ8R6-ZtEdYKkDc",
+     "nom": "As Materiaux quincaillerie",
+     "categorie": "Grossiste",
+     "adresse": "8XGJ+35R, Abidjan, Côte d’Ivoire",
+     "quartier": "Le Plateau",
+     "telephone": "+225 07 89 75 8988",
+     "lat": 5.3252258,
+     "lng": -4.019603,
+     "distance_km": 2.0,
+     "gammes": [
+      "end",
+      "col",
+      "fac"
+     ],
+     "pourquoi": "Dépôt de matériaux : il sert les maçons et les chantiers du quartier.",
+     "pitch": "Mettez en avant l'enduit et la colle à carreaux en sacs, avec un prix dépôt et un réassort rapide depuis Koumassi."
+    }
+   ]
   }
  ]
 }
